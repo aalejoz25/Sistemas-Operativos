@@ -3,7 +3,7 @@ main {
 }
 
 .container .jumbotron {
-    padding: 30px 15px;
+    padding: 40px 25px;
     position: relative;
 }
 
@@ -29,7 +29,7 @@ main {
 }
 
 .header-fixed {
-    background-color: #eee;
+    background-color: 50BAFD;
     left: 15px;
     position: absolute;
     top: 30px;

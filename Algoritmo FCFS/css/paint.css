@@ -1,6 +1,6 @@
 .svg {
     background-color: #cecece;
-    min-width: 960px;
+    min-width: 1050px;
 }
 
 .axis path,
@@ -50,7 +50,7 @@
 }
 
 .bar rect.ejecucion {
-    fill: steelblue;
+    fill: black;
     stroke: black;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .bar rect.ejecutandose {
-    fill: green;
+    fill: blue;
 }
 
 .bar rect.bloqueado {
@@ -76,9 +76,9 @@
     bottom: 0px;
     right: 5px;
     font-size: 12px;
-    background-color: #fff;
+    background-color: #A6A8AA;
     width: 150px;
-    border: solid 1px;
+    border: solid 5px;
 }
 h5 span{
     color: red;
