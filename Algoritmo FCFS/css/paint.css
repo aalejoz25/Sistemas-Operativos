@@ -68,7 +68,7 @@
 }
 
 .texto-nombre {
-    font-weight: bold;
+    font-weight: italic;
 }
 #info{
     z-index: 1; 

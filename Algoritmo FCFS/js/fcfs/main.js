@@ -24,7 +24,7 @@
         RAFAGARANDOM: 10
     };
 
-    // Clases
+	 // Funciones
     function Proceso() {
         this.nombre = 'Proceso';
         this.llegada = 0;
@@ -39,15 +39,39 @@
 
     function Main() {}
 
-    // Funciones
+   
     function agregar_proceso_a_listos(proceso) {
         colaListos.push(proceso);
     }
 
     function agregar_proceso_a_bloqueados(proceso) {
         colaBloqueados.push(proceso);
+		
+    }
+	
+	function reanudar_proceso(idProceso, fila) {
+        if (typeof fila !== 'object') {
+            fila = d3.select('.fila-bloqueado#proceso-' + idProceso);
+        }
+
+        var proceso = new Proceso();
+
+        proceso.rafaga = colaBloqueados[idProceso].rafagaFaltante;
+        proceso.nombre = colaBloqueados[idProceso].nombre + ' (Reanudado)';
+
+        crear_proceso(proceso.nombre, proceso.rafaga);
+        if (fila) {
+            fila.remove();
+        }
     }
 
+
+	function crear_primer_proceso() {
+        var nombreInicial = 'Proceso ' + (numeroProcesos++);
+        var rafagaInicial = 8;
+        crear_proceso(nombreInicial, rafagaInicial);
+    }
+	
     function crear_proceso(nombre, rafaga) {
         var proceso = new Proceso();
         var tiempo = tiempoActual;
@@ -217,11 +241,7 @@
             .text(proceso.rafaga);
     }
 
-    function crear_primer_proceso() {
-        var nombreInicial = 'Proceso ' + (numeroProcesos++);
-        var rafagaInicial = 8;
-        crear_proceso(nombreInicial, rafagaInicial);
-    }
+    
 
     function generar_proceso() {
         var nombre = 'Proceso ' + (numeroProcesos++);
@@ -315,21 +335,7 @@
             });
     }
 
-    function reanudar_proceso(idProceso, fila) {
-        if (typeof fila !== 'object') {
-            fila = d3.select('.fila-bloqueado#proceso-' + idProceso);
-        }
-
-        var proceso = new Proceso();
-
-        proceso.rafaga = colaBloqueados[idProceso].rafagaFaltante;
-        proceso.nombre = colaBloqueados[idProceso].nombre + ' (Reanudado)';
-
-        crear_proceso(proceso.nombre, proceso.rafaga);
-        if (fila) {
-            fila.remove();
-        }
-    }
+    
 
     function validar_proceso_en_ejecucion() {
         var tiempo = tiempoActual;

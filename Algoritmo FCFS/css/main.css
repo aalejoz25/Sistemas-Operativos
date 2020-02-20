@@ -2,6 +2,8 @@ main {
     min-height: calc(100vh - 306px);
 }
 
+
+
 .container .jumbotron {
     padding: 40px 25px;
     position: relative;
@@ -25,7 +27,7 @@ main {
 }
 
 .table-hover>tbody>tr.ejecutandose:hover {
-    background-color: green;
+    background-color: skyblue;
 }
 
 .header-fixed {
@@ -37,9 +39,10 @@ main {
 }
 
 .header-fixed th {
-    background-color: #eee;
+    background-color: black;
     padding: 0 5px 15px;
     text-align: center;
+	color: white;
 }
 
 .chart-container {
@@ -53,19 +56,19 @@ main {
 
 .ejecutandose,
 .ejecutandose:hover {
-    background-color: green;
+    background-color: blue;
     color: white;
 }
 
 .footer {
-    background-color: black;
-    color: #eee;
+    background-color: #CECECE;
+    color: ;
     padding: 20px 0;
     text-align: center;
 }
 
 #info {
-    background-color: #fff;
+    background-color: green;
     border: solid 1px;
     bottom: 0px;
     font-size: 12px;
@@ -76,7 +79,7 @@ main {
 }
 
 #info h5 span {
-    color: red;
+    color: black;
 }
 
 @media screen and (max-width: 600px) {
