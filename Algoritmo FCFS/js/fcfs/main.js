@@ -37,7 +37,11 @@
         this.bloqueado = false;
     }
 
-    function Main() {}
+	function generar_proceso() {
+        var nombre = 'Proceso ' + (numeroProcesos++);
+        var rafaga = Math.floor((Math.random() * constantes.RAFAGARANDOM) + 1);
+        crear_proceso(nombre, rafaga);
+    }
 
    
     function agregar_proceso_a_listos(proceso) {
@@ -243,11 +247,7 @@
 
     
 
-    function generar_proceso() {
-        var nombre = 'Proceso ' + (numeroProcesos++);
-        var rafaga = Math.floor((Math.random() * constantes.RAFAGARANDOM) + 1);
-        crear_proceso(nombre, rafaga);
-    }
+    
 
     function agregar_columna_tabla_listos(proceso) {
         var tabla = d3.select('#tabla_procesos');
@@ -412,6 +412,8 @@
             }
         });
     };
+	
+	function Main() {}
 
     // Ejecución de funciones
     var main = new Main();
