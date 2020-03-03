@@ -8,27 +8,25 @@ main {
 
 header h1{
 	
-	padding: 30px 950px;
-	color: red;
+	padding: 30px 500px;
+	color: white;
 	position: relative;
 	font-family:'Algerian';	
-	margin: 5px 5px;
+	margin: auto;
 }
 
 header h2{
-	padding: 0px 975px;
-	color: blue;
+	padding: 0px 520px;
+	color: white;
 	position: relative;
 	font-family:'Algerian';	
-	margin: 5px 5px;
+	margin: auto;
 }
 
 body{
 	background-color: black;
 	width: 100%;
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+	margin: auto;
 }
 	
 
