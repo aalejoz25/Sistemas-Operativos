@@ -19,9 +19,9 @@
     };
 
     var constantes = {
-        TIEMPOESPERA: 5001,
-        PROCESOSINICIALES: 5,
-        RAFAGARANDOM: 10
+        TIEMPOESPERA: 8000 ,
+        PROCESOSINICIALES: 2,
+        RAFAGARANDOM: 15
     };
 
     // Clases
@@ -133,9 +133,9 @@
         } else {
             swal({
                 title: 'Error!',
-                text: 'No se puede bloquear un proceso que no se encuentra en su sección critica',
+                text: 'No se puede bloquear procesos que no estan en la seccion critica',
                 type: 'error',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'Aceptar'
             });
         }
     }
@@ -334,9 +334,9 @@
                 } else {
                     swal({
                         title: 'Error!',
-                        text: 'Reanude la ejecución para bloquear un proceso',
+                        text: 'No se puede bloquear un proceso con la ejecucion pausada',
                         type: 'error',
-                        confirmButtonText: 'OK'
+                        confirmButtonText: 'Aceptar'
                     });
                 }
             });
@@ -447,7 +447,7 @@
             if (toggleBtn.classed('pause-btn')) {
                 clearInterval(timerAgregarProceso);
                 clearInterval(timerValidarProceso);
-                toggleBtn.html('<span class="glyphicon glyphicon-play" aria-hidden="true"></span> Reanudar ejecución')
+                toggleBtn.html('<span class="glyphicon glyphicon-play" aria-hidden="true"></span> Retomar Algoritmo')
                     .attr('class', 'btn btn-success play-btn');
 
                 pausado = true;
@@ -464,7 +464,7 @@
 
                 }, 1000);
 
-                toggleBtn.html('<span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pausar ejecución')
+                toggleBtn.html('<span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pausar Algoritmo')
                     .attr('class', 'btn btn-danger pause-btn');
 
                 pausado = false;

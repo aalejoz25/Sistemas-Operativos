@@ -16,21 +16,18 @@
     
 
     <header class="container">
-        <h1>Algoritmo Shortest Job First (SJF) - No Expulsivo</h1>
+        <h1>Algoritmo Shortest Job First</h1>
     </header>
 
     <div class="col-md-3 col-md-offset-6 text-left" id="info">
         <h5>Tiempo transcurrido: <span id="tiempo_actual">0</span></h5>
-        <h5>Proceso en ejecución: <span id="proceso_ejecucion">Proceso 0</span></h5>
-        <h5>Rafaga: <span id="rafaga_proceso">8</span></h5>
-        <h5>Tiempo restante: <span id="tiempo_restante">0</span> </h5>
     </div>
 
     <main role="main" class="container">
         <div class="row">
             <div class="ready-container col-lg-8">
-                <h2>Listos</h2>
-                <button type="button" class="btn btn-danger pause-btn" id="toggle-play"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pausar ejecución</button>
+                <h2>Estado Listo</h2>
+                <button type="button" class="btn btn-danger pause-btn" id="toggle-play"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pausar Algoritmo</button>
                 <div class="jumbotron">
                     <div class="table-container">
                         <table id="tabla_procesos" class="table table-hover">
@@ -65,11 +62,11 @@
                         </thead>
                     </table>
                 </div>
-                <button type="button" class="btn btn-primary btn-add">Agregar Proceso</button>
+                <button type="button" class="btn btn-primary btn-add">Añadir Proceso Nuevo</button>
             </div>
 
             <div class="locked-container col-lg-4">
-                <h2>Bloqueados</h2>
+                <h2>Estado Bloqueado</h2>
                 <div class="jumbotron">
                     <div class="table-container">
                         <table id="tabla_bloqueados" class="table table-hover">
@@ -100,6 +97,7 @@
         </div>
 
         <div class="chart-container">
+		<h2>Diagrama de GANTT</h2>
             <svg class="svg"></svg>
         </div>
     </main>
