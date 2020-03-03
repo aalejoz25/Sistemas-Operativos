@@ -18,17 +18,17 @@
 
     <header class="titulos">
         <h1>SISTEMAS OPERATIVOS 2019-3</h1>
-		<h2>Algoritmo Shortest Job First</h2>
+		<h2>ALGORITMO SHORTEST JOB FIRST</h2>
     </header>
 
     <div class="col-md-3 col-md-offset-6 text-left" id="info">
-        <h5>Tiempo: <span id="tiempo_actual">0</span></h5>
+        <h5><font face="bodoni mt black" color=white>Tiempo: </font><span id="tiempo_actual">0</span></h5>
     </div>
 
     <main role="main" class="container">
         <div class="row">
             <div class="ready-container col-lg-8">
-                <h2>Estado Listo</h2>
+                <h2><font face="algerian" color=white>Estado Listo</font></h2>
                 <button type="button" class="btn btn-danger pause-btn" id="toggle-play"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pausar Algoritmo</button>
                 <div class="jumbotron">
                     <div class="table-container">
@@ -36,12 +36,12 @@
                             <thead>
                                 <tr>
                                     <th style="width: 90px;">Proceso</th>
-                                    <th>T. Llegada</th>
+                                    <th> T. Llegada</th>
                                     <th>T. Rafaga</th>
                                     <th>T. Comienzo</th>
                                     <th>T. Finalización</th>
                                     <th>T. Retorno</th>
-                                    <th>T. Espera</th>
+                                    <th>T. Espera</th></font>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -52,23 +52,23 @@
                     <table class="header-fixed">
                         <thead>
                             <tr>
-                                <th style="width: 90px;">Proceso</th>
-                                <th>T. Llegada</th>
-                                <th>T. Rafaga</th>
-                                <th>T. Comienzo</th>
-                                <th>T. Finalización</th>
-                                <th>T. Retorno</th>
-                                <th>T. Espera</th>
+                                <th style="width: 90px;"><font face="Bodoni MT Black" color=black>Proceso</font></th>
+                                <th><font face="Bodoni MT Black" color=black>T. Llegada</font></th>
+                                <th><font face="Bodoni MT Black" color=black>T. Rafaga</font></th>
+                                <th><font face="Bodoni MT Black" color=black>T. Comienzo</font></th>
+                                <th><font face="Bodoni MT Black" color=black>T. Finalización</font></th>
+                                <th><font face="Bodoni MT Black" color=black>T. Retorno</font></th>
+                                <th><font face="Bodoni MT Black" color=black>T. Espera</font></th>
                                 <th style="width: 10%;"></th>
                             </tr>
                         </thead>
                     </table>
                 </div>
-                <button type="button" class="btn btn-primary btn-add">Añadir Proceso Nuevo</button>
+                
             </div>
 
             <div class="locked-container col-lg-4">
-                <h2>Estado Bloqueado</h2>
+                <h2><font face="Algerian" color=white>Estado Bloqueado</font></h2>
                 <div class="jumbotron">
                     <div class="table-container">
                         <table id="tabla_bloqueados" class="table table-hover">
@@ -87,9 +87,9 @@
                     <table class="header-fixed">
                         <thead>
                             <tr>
-                                <th>Proceso</th>
-                                <th>Bloqueo</th>
-                                <th>Rafaga</th>
+                                <th><font face="Bodoni MT Black" color=black>Proceso</font></th>
+                                <th><font face="Bodoni MT Black" color=black>Bloqueo</font></th>
+                                <th><font face="Bodoni MT Black" color=black>Rafaga</font></th>
                                 <th style="width: 20%;"></th>
                             </tr>
                         </thead>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="chart-container">
-		<h2><font face="Algerian" color='#A37F00'>Diagrama de GANTT </font> </h2>
+		<h2><font face="Algerian" color=white>Diagrama de GANTT </font> </h2>
             <svg class="svg"></svg>
         </div>
     </main>

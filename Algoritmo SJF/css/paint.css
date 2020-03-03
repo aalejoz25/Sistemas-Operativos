@@ -45,12 +45,12 @@
 }
 
 .bar rect.espera {
-    fill: #BCBCBC;
+    fill: gray;
     stroke: black;
 }
 
 .bar rect.ejecucion {
-    fill: steelblue;
+    fill: black;
     stroke: black;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .bar rect.ejecutandose {
-    fill: green;
+    fill: blue;
 }
 
 .bar rect.bloqueado {
@@ -76,9 +76,10 @@
     bottom: 0px;
     right: 5px;
     font-size: 12px;
-    background-color: #fff;
+    background-color: black;
     width: 150px;
-    border: solid 1px;
+    border: solid 5px;
+	border-color:white;
 }
 h5 span{
     color: red;

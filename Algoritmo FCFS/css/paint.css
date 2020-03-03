@@ -1,5 +1,5 @@
 .svg {
-    background-color: #cecece;
+    background-color: white;
     min-width: 1050px;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .texto-nombre {
-    font-weight: italic;
+    font-weight: bold;
 }
 #info{
     z-index: 1; 
