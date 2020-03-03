@@ -1,6 +1,15 @@
 main {
     min-height: calc(100vh - 306px);
 }
+.fondo2,
+.fondo{
+	background-image: url('../images/bg.png');
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	
+}
 
 .container .jumbotron {
     padding: 30px 15px;
