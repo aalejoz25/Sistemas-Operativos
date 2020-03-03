@@ -1,19 +1,43 @@
 main {
     min-height: calc(100vh - 306px);
 }
-.fondo2,
-.fondo{
+
+
+
+
+
+header h1{
+	
+	padding: 30px 950px;
+	color: red;
+	position: relative;
+	font-family:'Algerian';	
+	margin: 5px 5px;
+}
+
+header h2{
+	padding: 0px 975px;
+	color: blue;
+	position: relative;
+	font-family:'Algerian';	
+	margin: 5px 5px;
+}
+
+body{
 	background-image: url('../images/bg.png');
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
-	
 }
+	
+
 
 .container .jumbotron {
     padding: 30px 15px;
     position: relative;
+	font-family:'Impact';
+
 }
 
 .play-btn,
@@ -67,7 +91,7 @@ main {
 }
 
 .footer {
-    background-color: black;
+    background-color: #5F4C0B ;
     color: #eee;
     padding: 20px 0;
     text-align: center;
