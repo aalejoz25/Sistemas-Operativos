@@ -19,9 +19,9 @@
     };
 
     var constantes = {
-        TIEMPOESPERA: 8000 ,
-        PROCESOSINICIALES: 2,
-        RAFAGARANDOM: 15
+        TIEMPOESPERA: 5000000 ,
+        PROCESOSINICIALES: 7,
+        RAFAGARANDOM:10
     };
 
     // Clases
