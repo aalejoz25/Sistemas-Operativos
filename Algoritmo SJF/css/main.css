@@ -2,9 +2,41 @@ main {
     min-height: calc(100vh - 306px);
 }
 
+header h1{
+	
+	padding: 30px 350px;
+	color: white;
+	position: relative;
+	font-family:'buxton sketch';
+	font-size: 70px;
+	margin: auto;
+}
+
+header h2{
+	padding: 0px 520px;
+	color: white;
+	position: relative;
+	font-family:'buxton sketch';	
+	margin: auto;
+	text-decoration: underline;
+}
+
+body{
+	background-color: black;
+	width: 100%;
+	margin: auto;
+}
+	
+
+
 .container .jumbotron {
+	background-color:black;
     padding: 30px 15px;
     position: relative;
+	font-family:'Impact';
+	color: #cac7c7;
+	
+
 }
 
 .play-btn,
@@ -25,7 +57,7 @@ main {
 }
 
 .table-hover>tbody>tr.ejecutandose:hover {
-    background-color: green;
+    background-color: skyblue;
 }
 
 .header-fixed {
@@ -43,7 +75,7 @@ main {
 }
 
 .chart-container {
-    background-color: #cecece;
+    background-color: black;
     height: 500px;
     margin: 50px auto;
     max-width: 960px;
@@ -53,12 +85,12 @@ main {
 
 .ejecutandose,
 .ejecutandose:hover {
-    background-color: green;
+    background-color: blue;
     color: white;
 }
 
 .footer {
-    background-color: black;
+    background-color: gray ;
     color: #eee;
     padding: 20px 0;
     text-align: center;
