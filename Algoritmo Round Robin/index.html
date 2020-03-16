@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Algoritmo Round Robin</title>
+    <link rel="stylesheet" href="css/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/sweetalert.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/paint.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="col-md-3 col-md-offset-6 text-left" id="info">
+        <h5>Tiempo transcurrido: <span id="tiempo_actual">0</span></h5>
+        <h5>Proceso en ejecución: <span id="proceso_ejecucion">Proceso 0</span></h5>
+        <h5>Rafaga: <span id="rafaga_proceso">8</span></h5>
+        <h5>Tiempo restante: <span id="tiempo_restante">0</span> </h5>
+    </div>
+    <header class="container">
+        <h1>Algoritmo Round Robin</h1>
+    </header>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="ready-container col-lg-8">
+                <h2>Listos</h2>
+                <button type="button" class="btn btn-danger pause-btn" id="toggle-play"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pausar ejecución</button>
+                <div class="jumbotron">
+                    <div class="table-container">
+                        <table id="tabla_procesos" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 90px;">Proceso</th>
+                                    <th>T. Llegada</th>
+                                    <th>T. Rafaga</th>
+                                    <th>T. Comienzo</th>
+                                    <th>T. Finalización</th>
+                                    <th>T. Retorno</th>
+                                    <th>T. Espera</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <table class="header-fixed">
+                        <thead>
+                            <tr>
+                                <th style="width: 90px;">Proceso</th>
+                                <th>T. Llegada</th>
+                                <th>T. Rafaga</th>
+                                <th>T. Comienzo</th>
+                                <th>T. Finalización</th>
+                                <th>T. Retorno</th>
+                                <th>T. Espera</th>
+                                <th style="width: 10%;"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <button type="button" class="btn btn-primary btn-add">Agregar Proceso</button>
+            </div>
+
+            <div class="locked-container col-lg-4">
+                <h2>Bloqueados</h2>
+                <div class="jumbotron">
+                    <div class="table-container">
+                        <table id="tabla_bloqueados" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Proceso</th>
+                                    <th>Bloqueo</th>
+                                    <th>Rafaga</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <table class="header-fixed">
+                        <thead>
+                            <tr>
+                                <th>Proceso</th>
+                                <th>Bloqueo</th>
+                                <th>Rafaga</th>
+                                <th style="width: 20%;"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <svg class="svg"></svg>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+        </div>
+            <h4>Alvaro Zarabanda (2016102057)</h4>     
+			<h4>David Lopez (20161020505)</h4>
+
+    </footer>
+
+    <script src="js/vendor/d3.min.js"></script>
+    <script src="js/vendor/jquery-1.12.3.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/sweetalert.min.js"></script>
+    <script src="js/paint.js"></script>
+    <script src="js/round-robin/main.js"></script>
+</body>
+
+</html>
