@@ -1,49 +1,77 @@
-body{
-	text-align: center;
-	margin: 0 0px;		
+body {
+    text-align: center;
+    margin: 0 0px;
 }
-.container-fluid{
-	margin: 0px 40px;
+
+.container-fluid {
+    margin: 0px 40px;
 }
-.cpu{
-	border: 1px solid black;
-	width: 190px;
-	height: 35px;
-	margin: 0 auto;
+
+.cpu {
+    border: 1px solid black;
+    width: 190px;
+    height: 35px;
+    margin: 0 auto;
 }
-.cola1{
-	border: 1px solid black;
-	height: 150px;
-	background: #C1D2FC;
-	overflow: auto;
+
+.cola1 {
+    border: 1px solid black;
+    height: 150px;
+    background: #C1D2FC;
+    overflow: auto;
 }
-.cola2{
-	border: 1px solid black;
-	height: 150px;
-	background: #FCE6C1;
-	overflow: auto;
+
+.cola2 {
+    border: 1px solid black;
+    height: 150px;
+    background: #FCE6C1;
+    overflow: auto;
 }
-.cola3{
-	border: 1px solid black;
-	height: 150px;
-	background: #CEFCC1;
-	overflow: auto;
+
+.cola3 {
+    border: 1px solid black;
+    height: 150px;
+    background: #CEFCC1;
+    overflow: auto;
 }
-.procesador{
-	border: 1px solid black;
-	padding: 5px;
-	background: #E0E0E0;
+
+.procesador {
+    border: 1px solid black;
+    padding: 5px;
+    background: #E0E0E0;
 }
-.contenedor{
-	padding: 10px;
+
+.contenedor {
+    padding: 10px;
 }
-table{
-	font-size: 10px;
+
+table {
+    font-size: 10px;
 }
-iframe{
-	width: 80%;
-	height: 300px;
+
+iframe {
+    width: 80%;
+    height: 300px;
 }
-.tablass{
-	overflow: auto;
+
+.tablass {
+    overflow: auto;
+}
+
+.footer {
+    background-color: black;
+}
+
+.name {
+    text-align: center;
+    font-family: 'Gill Sans';
+    font-size: 30px;
+    color: white;
+}
+
+.jumbotron {
+    text-align: center;
+    font-family: 'Algerian';
+    background-color: black;
+    color: white;
 }

@@ -1,211 +1,224 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<script type="text/javascript" src="script/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src="script/proceso.js"></script>
-		<script type="text/javascript" src="script/nodo.js"></script>
-		<script type="text/javascript" src="script/cola.js"></script>
-		<script type="text/javascript" src="script/procesador.js"></script>
-		<script type="text/javascript" src="script/recursos.js"></script>
-		<script type="text/javascript" src="script/script.js"></script>		
-		<link href="estilos/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
-		<link href="estilos/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
-		<script src="estilos/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
-		<link href="estilos/miEstilo.css" rel="stylesheet">
 
-		<!--archivos de gantt-->
-		<script type="text/javascript" src="gantt/d3.v3.min.js"></script>
-		<script type="text/javascript" src="gantt/gantt-chart-d3.js"></script>
-		<script type="text/javascript" src="gantt/miGantt.js"></script>
-		<link href="gantt/estilosGantt.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="script/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="script/proceso.js"></script>
+    <script type="text/javascript" src="script/nodo.js"></script>
+    <script type="text/javascript" src="script/cola.js"></script>
+    <script type="text/javascript" src="script/procesador.js"></script>
+    <script type="text/javascript" src="script/recursos.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+    <link href="estilos/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilos/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="estilos/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+    <link href="estilos/miEstilo.css" rel="stylesheet">
 
-		<title>Algoritmo Round Robin</title>
-	</head>
-	<body>
-		<div class="jumbotron	">
-			<h1>Algoritmo Round Robin</h1>	
-		</div>
-		
-		<div class ="container-fluid">
+    <!--archivos de gantt-->
+    <script type="text/javascript" src="gantt/d3.v3.min.js"></script>
+    <script type="text/javascript" src="gantt/gantt-chart-d3.js"></script>
+    <script type="text/javascript" src="gantt/miGantt.js"></script>
+    <link href="gantt/estilosGantt.css" rel="stylesheet">
 
-			<!-- 
+    <title>Algoritmo Round Robin</title>
+</head>
+
+<header>
+
+    <div class="jumbotron">
+        <h1>Algoritmo Round Robin</h1>
+    </div>
+
+</header>
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <!-- 
 			fila para ubicar los recursos
 			 -->
-			<div class ="row">
-				
-			</div>
+        <div class="row">
 
-			<!-- 
+        </div>
+
+        <!-- 
 			fila para ubicar los formularios de creacion de procesos
 			 -->
-			 <div class ="row">
-			 	<!-- formulario 1 -->
-				<div class="col-md-10 formulario">
-					<h4>Creación de proceso</h4>
-					<form action="" class="form-horizontal">
-						<div class="form-group form-group-sm">
-							<label for="nombre1" class="col-sm-2 control-label">Nombre</label>
-							<div class="col-sm-6">
-								<input type="text" class="form-control input-sm" id="nombre1" placeholder="Nombre Proceso" disabled >	
-							</div>
-						</div>
-						<div class="form-group form-group-sm">
-							<label for="tiempo1" class="col-sm-2 control-label">Tiempo</label>
-							<div class="col-sm-6">
-								<input type="number" class="form-control input-sm" id="tiempo1" placeholder="Tiempo de Proceso">	
-							</div>
-						</div>
-						<div class="form-group form-group-sm">
-							<label for="recurso1" class="col-sm-2 control-label">Recurso</label>
-							<div class="col-sm-6">
-								<select class="form-control input-sm" id="recurso1" >
-									<option value="Impresora">Impresora</option>
-									<option value="Teclado">Teclado</option>
-									<option value="Mouse">Mouse</option>
-									<option value="Otro">Otro</option>
-								</select>	
-							</div>
-							<div class="col-sm-4">
-								<button type="button" class="btn btn-primary btn-sm" id="crear1">Crear 3 procesos</button>
-							</div>
-						</div>						
-					</form>					
-				</div>
-			</div>
-		</div>
-			
-		<div class="page-header"></div>
-		<!-- 
+        <div class="row">
+            <!-- formulario 1 -->
+            <div class="col-md-10 formulario">
+                <h4>Creación de proceso</h4>
+                <form action="" class="form-horizontal">
+                    <div class="form-group form-group-sm">
+                        <label for="nombre1" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control input-sm" id="nombre1" placeholder="Nombre Proceso" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label for="tiempo1" class="col-sm-2 control-label">Tiempo</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control input-sm" id="tiempo1" placeholder="Tiempo de Proceso">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label for="recurso1" class="col-sm-2 control-label">Recurso</label>
+                        <div class="col-sm-6">
+                            <select class="form-control input-sm" id="recurso1">
+								<option value="Impresora">Impresora</option>
+								<option value="Teclado">Teclado</option>
+								<option value="Mouse">Mouse</option>
+								<option value="Otro">Otro</option>
+							</select>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-primary btn-sm" id="crear1">Crear 3 procesos</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-header"></div>
+    <!-- 
 			fila para ubicar los procesadores
 		 -->
-		<div class="container-fluid">
-			 <div class ="row">
+    <div class="container-fluid">
+        <div class="row">
 
-<!-- __________________procesador 1______________________________________________-->
-				<div class="col-md-10 contenedor">
+            <!-- __________________procesador 1______________________________________________-->
+            <div class="col-md-10 contenedor">
 
-					<div class="row">
-						<div class="col-md-4">
-							<h4>Procesador 1</h4>	
-						</div>
-						<div class="col-md-2">
-							<button type="button" class="btn btn-primary btn-sm" id="ejecutar1">Ejecutar</button>	
-						</div>
-						<div class="col-md-2">
-							<button type="button" class="btn btn-primary btn-sm" id="interrumpir1" disabled>Interrumpir</button>	
-						</div>	
-						<div class="col-md-4">
-							<label>Tiempo:</label>
-							<br>
-							<label id="cronometro1" >0</label>
-						</div>
-												
-					</div>
-					
-					<div class="procesador">
-					<div class="row">
-						<div class="col-md-4">
-							
-						</div>
-						<div class="col-md-2">
-							<h4>CPU</h4>
-						</div>
-						<div class="col-md-2">
-							<h4 id="rendimientoCPU1">0%</h4>
-						</div>
-						
-					</div>
-					<div class="row">
-						<div class="cpu">
-							<!-- CPU -->
-							<table class="table table-striped" id="cpu1">
-							</table>
-						</div>
-					</div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>Procesador 1</h4>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-sm" id="ejecutar1">Ejecutar</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-sm" id="interrumpir1" disabled>Interrumpir</button>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Tiempo:</label>
+                        <br>
+                        <label id="cronometro1">0</label>
+                    </div>
 
-					<div class="row">
-						<div class="col-sm-6">
-							<h4>Listos</h4>
-							<div class="cola1">
-								<!-- Listos -->
-								<table class="table table-striped" id="listos1">
-								</table>
-							</div>
-							
-						</div>
-						<div class="col-sm-6">
-							<h4>Bloqueados</h4>
-							<div class="cola1">
-								<!-- Bloqueados -->
-								<table class="table table-striped" id="bloqueados1">
-								</table>
-							</div>
-						</div>
-					</div>
+                </div>
 
-					<div class="row">
-						<div class="col-sm-6">
-							<h4>Suspendidos</h4>
-							<div class="cola1">
-								<!-- suspendidos -->
-								<table class="table table-striped" id="suspendidos1">
-								</table>
-							</div>
-							
-						</div>
-						<div class="col-sm-6">
-							<h4>Terminados</h4>
-							<div class="cola1">
-								<!-- terminados -->
-								<table class="table table-striped" id="terminados1">
-								</table>
+                <div class="procesador">
+                    <div class="row">
+                        <div class="col-md-4">
 
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>CPU</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <h4 id="rendimientoCPU1">0%</h4>
+                        </div>
 
-			</div>
+                    </div>
+                    <div class="row">
+                        <div class="cpu">
+                            <!-- CPU -->
+                            <table class="table table-striped" id="cpu1">
+                            </table>
+                        </div>
+                    </div>
 
-		</div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Listos</h4>
+                            <div class="cola1">
+                                <!-- Listos -->
+                                <table class="table table-striped" id="listos1">
+                                </table>
+                            </div>
 
-		<div class="page-header"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>Bloqueados</h4>
+                            <div class="cola1">
+                                <!-- Bloqueados -->
+                                <table class="table table-striped" id="bloqueados1">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
-		<!--
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Suspendidos</h4>
+                            <div class="cola1">
+                                <!-- suspendidos -->
+                                <table class="table table-striped" id="suspendidos1">
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>Terminados</h4>
+                            <div class="cola1">
+                                <!-- terminados -->
+                                <table class="table table-striped" id="terminados1">
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page-header"></div>
+
+    <!--
 ________espacio para estadísticas ______________________________________________________________________________
-				 -->		
+				 -->
 
-	<h2>Diagramas de Gantt</h2>
-		<div class="container-fluid">
-			<!-- diagramas de gant -->
-			<div class="row">
-				
-				<div class="col-sm-2">
-					<h4>Diagrama de Gantt</h4>
-					<button type="button" class="btn btn-primary btn-sm" id="gantt1">Diagrama Gantt</button>
-					<br><br>
-					<button type="button" class="btn btn-primary btn-sm" id="rendimiento1">Rendimiento</button>
-				</div>
-				<!--diagrama gant procesador 1-->
-				<div class="col-sm-8" id="dGantt1">	
-				</div>
-			</div>
-		</div>
-		<br><br>
-	<h2>Rendimiento</h2>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-10 tablass">
-				<table class="table table-striped" id="vrendimiento1">
+    <h2>Diagramas de Gantt</h2>
+    <div class="container-fluid">
+        <!-- diagramas de gant -->
+        <div class="row">
 
-				</table>
+            <div class="col-sm-2">
+                <h4>Diagrama de Gantt</h4>
+                <button type="button" class="btn btn-primary btn-sm" id="gantt1">Diagrama Gantt</button>
+                <br><br>
+                <button type="button" class="btn btn-primary btn-sm" id="rendimiento1">Rendimiento</button>
+            </div>
+            <!--diagrama gant procesador 1-->
+            <div class="col-sm-8" id="dGantt1">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <h2>Rendimiento</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 tablass">
+                <table class="table table-striped" id="vrendimiento1">
 
-			</div>
-		</div>
-	</div>
+                </table>
 
-	</body>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer class="footer">
+    <h3 class="name">Jose Daniel Jimenez ()</h3>
+    <h3 class="name">Alvaro Zarabanda (20161020507)</h3>
+</footer>
 
 </html>
