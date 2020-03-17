@@ -1,6 +1,7 @@
 body {
     text-align: center;
     margin: 0 0px;
+    background-color: gray;
 }
 
 .container-fluid {
@@ -58,7 +59,7 @@ iframe {
     overflow: auto;
 }
 
-.footer {
+footer {
     background-color: black;
 }
 
@@ -69,9 +70,19 @@ iframe {
     color: white;
 }
 
+header {
+    background-color: black;
+}
+
 .jumbotron {
     text-align: center;
     font-family: 'Algerian';
-    background-color: black;
     color: white;
+    background-color: black;
+}
+
+.curso {
+    color: white;
+    font-family: 'sans-serif';
+    text-align: center;
 }
