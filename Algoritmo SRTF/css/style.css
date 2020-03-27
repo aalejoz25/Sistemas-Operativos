@@ -1,23 +1,43 @@
+h1{
+	
+	padding: 30px 200px;
+	color: white;
+	position: relative;
+	font-family:'buxton sketch';
+	font-size: 20px;
+	margin: auto;
+}
+
 #RR{
 	overflow: hidden;
 	font-size: 1.2em;
+	background-color:black;
+	color:white;
 }
 #RR div.span12 {
 	margin-left: 0;
+	background-color:black;
+	color:white;
 }
 #RR div.span12 span{
 	margin-left: 10px;
 	display: block;
 	width: 136px;
+	background-color:black;
+	color:white;
 }
 #RR div.span12 div{
 	margin-left: 10px;
 	display: block;
 	width: 136px;
+	background-color:black;
+	color:white;
 }
 #contenedorTabla{
 	max-height: 220px;
 	overflow: auto;
+	background-color:black;
+	color:white;
 }
 #ram, #teclado, #monitor, #video{
 	width:0;
